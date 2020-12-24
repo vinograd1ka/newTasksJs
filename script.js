@@ -8,24 +8,42 @@
 
 //2
 
-    function arrayHasElement() {
+    var arrayHasElement = function () {
+
     }
+    console.log(arrayHasElement(['true', 'false', 5], 5))
 
 //3
 
+    var getLetterAmountInString= function (string, letter) {
 
+    }
+    console.log(getLetterAmountInString('asgdsgsdghefgdcvzx', 'a'));
 
 //4
 
-    function getBiggestNumber(array) {
-        return Math.max.apply( Math, array);
+    var getBiggestNumber = function (number0, number1) {
+        //return Math.max.apply( Math, array);
+        var result = '';
+        if (number0 > number1){
+            result = number0;
+            return result;
+        }
+        else{
+            result = number1;
+            return result;
+        }
     }
+    console.log(getBiggestNumber(12 , 6));
 
-    console.log(getBiggestNumber([5 , 122]));
 //5
 
-    function createMultiplier() {
+    var createMultiplier = function (number) {
+        console.log(number*number);
     }
+
+    createMultiplier(12);
+
 
 //6
 
