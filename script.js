@@ -24,13 +24,18 @@
     var result2 = arrayHasElement([1, 'true', 'asdasdasgf', 5], 'true'); // true
     console.log(result2);
 
-//3
+//3 COMPLETE
 
     var getLetterAmountInString= function (array, letter) {
         //return (string.split(letter).length-1);
         //return for(var count=0; count<array.length; count+=+(letter===array[i++]));
         //  for(var i=count=0; i<str.length; count+=+(stringsearch===str[i++]));
-        for (var count = -1, index = 0; index != -1; count++, index = array.indexOf(letter, index + 1));
+        var count = 0;
+        for(var i=0; i<array.length; i++){
+            if(array[i] === letter){
+                count++;
+            }
+        }
         return count;
     }
     var result3 = getLetterAmountInString('aaasadaaaa', 'a');
@@ -86,13 +91,13 @@
 
 //8 COMPLETE
 
-    var arraysHasElement = function (array, array, val) {
+    var arraysHasElement = function (array0, array1, val) {
         /*return array.some(function(arrVal) {
             return val === arrVal;
         });*/
-        for (var i = 0; i < array.length; i++){
-            if (array[i] === val){
-                return 'true';
+        for (var i = 0; i < array0.length && array1.length; i++){
+            if(array1[i] && array0[i] === val){
+                return 'true'
             }
         }
         return 'false';
