@@ -28,14 +28,12 @@
 
     var getLetterAmountInString= function (array, letter) {
         //return (string.split(letter).length-1);
-        for (var i = 0; i < array.length; i++){
-            if (array[i] === letter){
-                return array.letter;
-            }
-        }
-        return 'error';
+        //return for(var count=0; count<array.length; count+=+(letter===array[i++]));
+        //  for(var i=count=0; i<str.length; count+=+(stringsearch===str[i++]));
+        for (var count = -1, index = 0; index != -1; count++, index = array.indexOf(letter, index + 1));
+        return count;
     }
-    var result3 = getLetterAmountInString('asadasdasds', 'a');
+    var result3 = getLetterAmountInString('aaasadaaaa', 'a');
     console.log(result3);
 
 //4 COMPLETE
