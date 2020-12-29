@@ -15,10 +15,10 @@
 
         for (var i = 0; i < array.length; i++){
             if (array[i] === val){
-                return 'true';
+                return true;
             }
         }
-        return 'false';
+        return false
     }
 
     var result2 = arrayHasElement([1, 'true', 'asdasdasgf', 5], 'true'); // true
@@ -28,8 +28,6 @@
 
     var getLetterAmountInString= function (array, letter) {
         //return (string.split(letter).length-1);
-        //return for(var count=0; count<array.length; count+=+(letter===array[i++]));
-        //  for(var i=count=0; i<str.length; count+=+(stringsearch===str[i++]));
         var count = 0;
         for(var i=0; i<array.length; i++){
             if(array[i] === letter){
@@ -66,7 +64,6 @@
     var multiplier = createMultiplier();
     console.log(multiplier(8));
 
-
 //6 COMPLETE
 
     var result = function isFunctionNamesEqual (func1, func2) {
@@ -78,7 +75,7 @@
 //7 COMPLETE
 
     var substituteElement = function (array, change, whatToChange) {
-        for(var i = 0; i < array.length; i++){
+        for (var i = 0; i < array.length; i++){
              if (array[i] === change){
                  array[i] = whatToChange;
              }
@@ -95,24 +92,24 @@
         /*return array.some(function(arrVal) {
             return val === arrVal;
         });*/
-        var arraysHasElement1;
-        var arraysHasElement2;
+        var arrayBoolean1;
+        var arrayBoolean2;
         for (var i = 0; i < array0.length; i++){
             if(array0[i]=== val){
-                arraysHasElement1 = true;
+                arrayBoolean1 = true;
             }
         }
 
         for (var a = 0; a < array1.length; a++){
-            if(array1[a]=== val){
-                arraysHasElement2 = true;
+            if(array1[a] === val){
+                arrayBoolean2 = true;
             }
         }
 
-        if(arraysHasElement1 && arraysHasElement2 === true){
-            return 'true';
+        if (arrayBoolean1 && arrayBoolean2 === true){
+            return true;
         }
-        return 'false';
+        return false;
     }
     var result8 = arraysHasElement([1, 123, 513, 2312], [228, 2, 513, 1], 1);
     console.log(result8);
