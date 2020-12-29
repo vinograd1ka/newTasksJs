@@ -106,7 +106,7 @@
             }
         }
 
-        if (arrayBoolean1 && arrayBoolean2 === true){
+        if (arrayBoolean1 === true && arrayBoolean2 === true){
             return true;
         }
         return false;
