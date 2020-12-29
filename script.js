@@ -95,13 +95,25 @@
         /*return array.some(function(arrVal) {
             return val === arrVal;
         });*/
-        for (var i = 0; i < array0.length && array1.length; i++){
-            if(array1[i] && array0[i] === val){
-                return 'true'
+        var arraysHasElement1;
+        var arraysHasElement2;
+        for (var i = 0; i < array0.length; i++){
+            if(array0[i]=== val){
+                arraysHasElement1 = true;
             }
+        }
+
+        for (var a = 0; a < array1.length; a++){
+            if(array1[a]=== val){
+                arraysHasElement2 = true;
+            }
+        }
+
+        if(arraysHasElement1 && arraysHasElement2 === true){
+            return 'true';
         }
         return 'false';
     }
-    var result8 = arraysHasElement([1, 123, 513, 2312], [228, 1, 513, 512], 1);
+    var result8 = arraysHasElement([1, 123, 513, 2312], [228, 2, 513, 1], 1);
     console.log(result8);
 })()
