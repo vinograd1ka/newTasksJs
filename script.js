@@ -113,4 +113,76 @@
     }
     var result8 = arraysHasElement([1, 123, 513, 2312], [228, 2, 513, 1], 1);
     console.log(result8);
-})()
+
+
+
+
+
+
+    //1 COMPLETE
+
+   function filterFalsyValues(array) {
+        var check = [];
+        for(var i=0; i < array.length; i++){
+            if(array[i] !== 0 && array[i] !== null && array[i] !== false && array[i] !== undefined){
+                check.push(array[i])
+            }
+        }
+       return check;
+    }
+    var result11 = filterFalsyValues([5, 'asd', false, true, undefined, NaN, null, 'true']);
+    console.log(result11);
+
+
+    //2 COMPLETE
+
+    function getMultipliedBigNumbers(array){
+        var check = [];
+        var num = [];
+        for (var i = 0; i < array.length; i++) {
+            num.push(array[i]*array[i]);
+            if (num[i] >= 1000) {
+                check.push(num[i]);
+            }
+        }
+        return check;
+    }
+    var result12 = getMultipliedBigNumbers([32, 42, 55, 2, 12, 51]);
+    console.log(result12);
+
+
+
+    //3 COMPLETE
+    function getArrayValuesSum(array) {
+        var sum = 0;
+        for(var i=0; i < array.length; i++){
+            if(typeof array[i] === 'number'){
+                sum += array[i];
+            }
+            else{
+                return array[i].length;
+            }
+        }
+        return sum;
+    }
+    var result13 = getArrayValuesSum([5, 12, 24]);
+    console.log(result13);
+
+
+
+    //4 COMPLETE
+    function reverseArray(array) {
+        var myArr = [];
+        if(array.length >= 5){
+            for(var i=0; i < array.length; i++){
+                myArr[i] = array[i];
+            }
+            return myArr.reverse();
+        }
+        else{
+            return array;
+        }
+    }
+    var result14 = reverseArray([1, 5, 2, 6, 8]);
+    console.log(result14);
+})();
