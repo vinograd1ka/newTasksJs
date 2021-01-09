@@ -174,6 +174,15 @@
     function reverseArray(array) {
         var myArr = [];
         if(array.length >= 5){
+            for (var i = 0; i < array.length; i++){
+                myArr[i] = array[(array.length - 1) - i];
+            }
+            return myArr;
+        }
+        else{
+            return array;
+        }
+        /*if(array.length >= 5){
             for(var i=0; i < array.length; i++){
                 myArr[i] = array[i];
             }
@@ -181,8 +190,8 @@
         }
         else{
             return array;
-        }
+        }*/
     }
-    var result14 = reverseArray([1, 5, 2, 6, 8]);
+    var result14 = reverseArray([5, 2, 6, 8]);
     console.log(result14);
 })();
