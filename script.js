@@ -121,7 +121,7 @@
 
     //1 COMPLETE
 
-   function filterFalsyValues(array) {
+        function filterFalsyValues(array) {
         var check = [];
         for(var i=0; i < array.length; i++){
             if(array[i] !== 0 && array[i] !== null && array[i] !== false && array[i] !== undefined){
@@ -194,4 +194,90 @@
     }
     var result14 = reverseArray([5, 2, 6, 8]);
     console.log(result14);
+
+
+
+    //1 COMPLETE
+
+    function getArraysEqualElementsCount(array1, array2) {
+        var count = 0;
+        for (let i=0; i<array1.length; i++) {
+            if (array1[i] === array2[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    var result21 = getArraysEqualElementsCount([1, 2, 3] , ['ASD', 5, 8]);
+    console.log(result21);
+
+    //2 COMPLETE
+
+    function getArraysNotEqualElementsCount(array1 , array2) {
+        var count = 0;
+        for(var i = 0; i < array1.length; i++){
+            if(array1[i] !== array2[i]){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    var result22 = getArraysNotEqualElementsCount([5, 6, 7, 8], [5, 6, 7, 8]);
+    console.log(result22);
+
+    //3 COMPLETE
+
+    function getArrayEqualElementCountHard(array1 ,array2) {
+        var count = 0;
+        for(var i = 0; i < array1.length; i++){
+            for (var u = 0; u < array2.length; u++){
+                if(array1[i] === array2[u]){
+                    count++;
+                }
+                else if(array1[i] === array1[i + 1]){
+                    return 1;
+
+                }
+                else if(array2[u] === array2[u + 1]){
+                    return 1;
+                }
+            }
+        }
+        return count;
+    }
+    var result23 = getArrayEqualElementCountHard([5, 2, 's'], [1, 's', 's', 's']);
+    console.log(result23);
+
+    //4 COMPLETE
+
+    function getArrayElementsInARowAmount(array) {
+        var count = 0;
+        for(var i = 0; i < array.length; i++){
+            if(array[i] === array[i + 1]){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    var result24 = getArrayElementsInARowAmount([true, true, 1, 2, 1, 1, 2, 2]);
+    console.log(result24);
+
+    //5 COMPLETE
+
+    function getArrayElementByType(array, typeoff) {
+        var check = [];
+        for(var i = 0; i < array.length; i++){
+            if (typeof array[i] === typeoff){
+                check.push(array[i])
+            }
+        }
+        return check;
+    }
+
+    var result25 = getArrayElementByType([1, 'asd', 2, true, false, true, 3], 'number');
+    console.log(result25);
+
 })();
