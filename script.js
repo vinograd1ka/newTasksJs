@@ -231,23 +231,19 @@
 
     function getArrayEqualElementCountHard(array1 ,array2) {
         var count = 0;
-        for(var i = 0; i < array1.length; i++){
-            for (var u = 0; u < array2.length; u++){
-                if(array1[i] === array2[u]){
+        for (var i = 0; i < array1.length; i++) {
+            for(var u = 0; u < array2.length; u++) {
+                if (array1[i] === array2[u]) {
+                    delete array1[i];
+                    delete array2[u];
                     count++;
-                }
-                else if(array1[i] === array1[i + 1]){
-                    return 1;
-
-                }
-                else if(array2[u] === array2[u + 1]){
-                    return 1;
+                    break;
                 }
             }
         }
         return count;
     }
-    var result23 = getArrayEqualElementCountHard([5, 2, 's'], [1, 's', 's', 's']);
+    var result23 = getArrayEqualElementCountHard(['a', 'b', 'c', 'd', 'e'], ['w', 'z', 'r', 'b', 'f', 'e']);
     console.log(result23);
 
     //4 COMPLETE
